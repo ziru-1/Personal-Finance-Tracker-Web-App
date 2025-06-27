@@ -31,6 +31,9 @@ export const FinancialRecordsProvider = ({
     const response = await fetch("http://localhost:3001/financial-records", {
       method: "POST",
       body: JSON.stringify(record),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
     try {
